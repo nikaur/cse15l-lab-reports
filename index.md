@@ -28,3 +28,7 @@ Through the lows and highs
 gets boring, but I know that I will be alright
 'Cause I'm off in five
 ```
+```
+experimenting a little bit more on vscode
+```
+hi! **my name is *Nim***
