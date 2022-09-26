@@ -1,3 +1,7 @@
+link to lab report page\
+[Lab Report 1](https://nikaur.github.io/cse15l-lab-reports/lab-report-1-week-0.html)
+
+
 random information i guess\
 more typing\
 and more\
