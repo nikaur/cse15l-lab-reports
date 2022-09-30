@@ -3,7 +3,7 @@ Hi CSE15L students!
 
 The following post will cover how to log into a course-specific account on ieng6 for remote access for MacOS users, so let’s get started! 
 
-1. Find Your Account
+1. **Find Your Account**
 
     Search for your course-specific account using the link below: 
 
@@ -21,7 +21,7 @@ The following post will cover how to log into a course-specific account on ieng6
 
     The password change will take 15-20 minutes to sync, so complete step 2 while waiting.
 
-2. Install Visual Studio Code
+2. **Install Visual Studio Code**
     
     VSCode is the text editor we will be using. Since I already had VSCode, I did not need to install it, however, the link below provides instructions on how to install. 
     
@@ -31,7 +31,7 @@ The following post will cover how to log into a course-specific account on ieng6
 
     ![image](step2.png)
 
-3. Connecting to a Remote Host
+3. **Connecting to a Remote Host**
 	
     We’re going to start off by opening a terminal in VSCode.You can do this two ways: Shift + Control + ` OR at the top, go to Terminal and then click New Terminal. 
 
@@ -54,7 +54,7 @@ The following post will cover how to log into a course-specific account on ieng6
     Your computer is now connected to a computer in the CSE Basement! 
     ***Important terminology to note:*** your computer is referred to as the “client” and the computer in the basement is the “server”. 
 
-4. Running Some Commands 
+4. **Running Some Commands**
     
     You can now try running some commands on your computer and the remote computer to see how this works (see below). To log out of the remote computer, either use Control + D, or type in the command “exit”. 
     * ls
@@ -63,7 +63,7 @@ The following post will cover how to log into a course-specific account on ieng6
     * ls /home/linux/ieng6/cs15lfa22 
     * cat /home/linux/ieng6/cs15lfa22/public/hello.txt
 
-5. Moving Files using scp 
+5. **Moving Files using scp**
 
     To copy files from your computer to a remote computer, we will use the command “scp”. This command is always run from your computer (the client), not the server. To try this out, create a file called Random.java with the following code: 
 
@@ -88,7 +88,7 @@ The following post will cover how to log into a course-specific account on ieng6
 
     ![image](step5.4.png)
 
-6. SSH Keys 
+6. **SSH Keys** 
     Logging on and having to type the password every time is too time-consuming, so to resolve this we will use ssh-keygen. This creates a public and private key file and we will copy the public key onto the server and the private key onto the client so we no longer need to use the password. 
 
     On your computer, run the following commands:\
@@ -105,7 +105,7 @@ The following post will cover how to log into a course-specific account on ieng6
 
     ![image](step6.3.png)
 
-7. Optimize Remote Running 
+7. **Optimize Remote Running** 
     We want to be able to copy files over quickly, so try to make an edit to the local Random.java file (on your computer), copy it to the server, and then run it on the server.
     To do this we will take advantage of the the following shortcuts: 
     * Up-arrow on keyboard: to recall the previous command 
@@ -116,4 +116,4 @@ The following post will cover how to log into a course-specific account on ieng6
 
 And that's a wrap. Thank you.
 
-Credit: The authors of [*Week 1 - Remote Access and the Filesystem*](https://ucsd-cse15l-f22.github.io/week/week1/#week1-lab-report) on the [CSE 15L website](https://ucsd-cse15l-f22.github.io) for the process and overall instructions. 
+Credit: The authors of [*Week 1 - Remote Access and the Filesystem*](https://ucsd-cse15l-f22.github.io/week/week1/#week1-lab-report) on the [CSE 15L website](https://ucsd-cse15l-f22.github.io) for the process and general instructions. 
