@@ -89,6 +89,7 @@ The following post will cover how to log into a course-specific account on ieng6
     ![image](step5.4.png)
 
 6. **SSH Keys** 
+    
     Logging on and having to type the password every time is too time-consuming, so to resolve this we will use ssh-keygen. This creates a public and private key file and we will copy the public key onto the server and the private key onto the client so we no longer need to use the password. 
 
     On your computer, run the following commands:\
@@ -106,6 +107,7 @@ The following post will cover how to log into a course-specific account on ieng6
     ![image](step6.3.png)
 
 7. **Optimize Remote Running** 
+    
     We want to be able to copy files over quickly, so try to make an edit to the local Random.java file (on your computer), copy it to the server, and then run it on the server.
     To do this we will take advantage of the the following shortcuts: 
     * Up-arrow on keyboard: to recall the previous command 
