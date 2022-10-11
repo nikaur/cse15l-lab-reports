@@ -58,10 +58,16 @@ The following post will cover how to log into a course-specific account on ieng6
     
     You can now try running some commands on your computer and the remote computer to see how this works (see below). To log out of the remote computer, either use Control + D, or type in the command “exit”. 
     * ls
+        * to see the contents of a directory 
     * ls -a
+        * doesn't ignore entries starting with a 
     * ls -lat
+        * to list all files and directories and their details
     * ls /home/linux/ieng6/cs15lfa22 
     * cat /home/linux/ieng6/cs15lfa22/public/hello.txt
+        * to print the contents of the file 
+
+[ls documentation reference](https://man7.org/linux/man-pages/man1/ls.1.html)
 
 5. **Moving Files using scp**
 
