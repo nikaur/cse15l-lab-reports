@@ -173,4 +173,5 @@ Tests run: 1,  Failures: 1
 Essentially, the expected merged list was supposed to take the two lists, and combine them in alphabetical order thus the expected was {apple, boy, hello, hi, hm, k}. However, the merge method instead only combined the two lists and didn't alphabetize them making the actual output {boy, apple, hi, hello, k, hm}. 
 
 Bug + Connection: \
-Looking at the code, the original implementation was only merging the two lists but not alphabetizing them. To make it so that both lists combined were alphabetized, the code should be fixed to 
+Looking at the code, the original implementation was only merging the two lists but not alphabetizing them. To make it so that both lists combined were alphabetized, the code needs to add that alphabetization part to the end of the current implementation. I did this by importing the java.util package and using the sorted method to alphabetize which worked on the current test/input (yay another success). \
+The sorted() method was implemented as described by the following website: [sorted() method](https://www.javatpoint.com/how-to-sort-a-list-in-java). 
