@@ -136,7 +136,7 @@ Caused by: java.lang.AssertionError: expected:<1> but was:<3>
 
 Essentially, the expected reversed list was {1, 2, 3}, but what we were getting instead was {3, 2, 3} 
 
-Bug + Connection: 
+Bug + Connection: \
 Looking at the code, the original implementation was changing/altering the original ArrayList using a for loop so by the time the first index got altered to equal the last index, the original first index value wasn't stored anywhere, hence the last value being 3 again. To fix this issue, the code needs to be altered so that there is a copy of the original ArrayList and that copy of the original ArrayList can be used to update and then return the actual ArrayList. Upon making this correction in lab, the input produced the expected output (yay, success). 
 
 
@@ -155,3 +155,22 @@ Upon testing the merge method, the following bug was discovered and improved upo
     }
 ```
 
+Symptom: 
+```
+There was 1 failure:
+1) mergeTest(ListTests)
+java.lang.AssertionError: expected:<[apple, boy, hello, hi, hm, k]> but was:<[boy, apple, hi, hello, k, hm]>
+        at org.junit.Assert.fail(Assert.java:89)
+        at org.junit.Assert.failNotEquals(Assert.java:835)
+        at org.junit.Assert.assertEquals(Assert.java:120)
+        at org.junit.Assert.assertEquals(Assert.java:146)
+        at ListTests.mergeTest(ListTests.java:32)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+```
+
+Essentially, the expected merged list was supposed to take the two lists, and combine them in alphabetical order thus the expected was {apple, boy, hello, hi, hm, k}. However, the merge method instead only combined the two lists and didn't alphabetize them making the actual output {boy, apple, hi, hello, k, hm}. 
+
+Bug + Connection: \
+Looking at the code, the original implementation was only merging the two lists but not alphabetizing them. To make it so that both lists combined were alphabetized, the code should be fixed to 
