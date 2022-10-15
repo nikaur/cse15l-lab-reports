@@ -99,18 +99,10 @@ Preface: There will be 4 screenshots in the following, the first one won't have 
 
 ## Part 2 -- Week 3 
 
-***File One Name***
-
-[screenshot]
-
-
-| Failure-Inducing Input | Symptom | Bug | Connection |
-| --- | --- | --- | --- | 
-| okay | so | im | trying |
-
-
-1. 
+***ArrayTests.java file***
+ 
 Failure-Inducing Input: 
+Upon testing the reverseInPlace method, the following bug was discovered and improved upon. 
 ```
 @Test
  public void testReverseLargerArrays(){
@@ -142,4 +134,24 @@ Caused by: java.lang.AssertionError: expected:<1> but was:<3>
         ... 38 more
 ```
 
-Essentially, the expected reversed list was {1, 2, 3}, but what we were getting instead was {}
+Essentially, the expected reversed list was {1, 2, 3}, but what we were getting instead was {3, 2, 3} 
+
+Bug + Connection: 
+Looking at the code, the original implementation was changing/altering the original ArrayList using a for loop so by the time the first index got altered to equal the last index, the original first index value wasn't stored anywhere, hence the last value being 3 again. To fix this issue, the code needs to be altered so that there is a copy of the original ArrayList and that copy of the original ArrayList can be used to update and then return the actual ArrayList. Upon making this correction in lab, the input produced the expected output (yay, success). 
+
+
+***LinkedList.java file***
+
+Failure-Inducing Input: 
+Upon testing the merge method, the following bug was discovered and improved upon. 
+```
+@Test
+    public void mergeTest(){
+        List<String> input = Arrays.asList("hi", "hello", "k", "hm");
+        List<String> input2 = Arrays.asList("boy", "apple"); 
+        ListExamples.merge(input, input2);
+        List<String> comp = Arrays.asList("apple", "boy", "hello", "hi", "hm", "k"); 
+        assertEquals(comp, ListExamples.merge(input, input2)); 
+    }
+```
+
