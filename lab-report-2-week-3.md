@@ -80,28 +80,21 @@ class SearchEngine {
 ## Screenshots of Application
 
 Preface: There will be 4 screenshots in the following, the first one won't have a lot of details while the following three will. 
-
-1. 
+ 
 ![image](setup1.png)
-   
-    In the screenshot above I'm building and running a server on the local computer. 
+    1. In the screenshot above I'm building and running a server on the local computer. 
 
 
-
-
-2. 
 ![image](okayadded.png)
+    2. In the screenshot above, I first added an instance of "okay" to the String ArrayList using the add method in my code ("/add?s=okay"). Once the code went through my argument, it filters through the argument to find the string I wanted to add, which in this case was "okay". This then updates the String ArrayList to contain "okay" and then prints out the whole string (which only contains okay at this point) on the screen. 
+ 
 
-    In the screenshot above, I first added an instance of "okay" to the String ArrayList using the add method in my code ("/add?s=okay"). Once the code went through my argument, it filters through the argument to find the string I wanted to add, which in this case was "okay". This then updates the String ArrayList to contain "okay" and then prints out the whole string (which only contains okay at this point) on the screen. 
-
-3. 
 ![image](3stringsadded.png)
+3. In the second screenshot, I already added an instance of "sure" (not shown) and then added an instance of "strings" to the String ArrayList using the add method in my code ("/add?s=strings") a third time. This was to make it that the String ArrayList is longer for when we use the search method later. Similar to the previous screenshot, the code goes through the argument, filters through to find the string I wanted to add ("strings"), and then updates the String ArrayList to contain "okay", "sure", and "strings". This updated list is then printed out onto the screen, showing the statement "String strings added! It's now okay, sure, strings". 
 
-In the second screenshot, I already added an instance of "sure" (not shown) and then added an instance of "strings" to the String ArrayList using the add method in my code ("/add?s=strings") a third time. This was to make it that the String ArrayList is longer for when we use the search method later. Similar to the previous screenshot, the code goes through the argument, filters through to find the string I wanted to add ("strings"), and then updates the String ArrayList to contain "okay", "sure", and "strings". This updated list is then printed out onto the screen, showing the statement "String strings added! It's now okay, sure, strings". 
-
-4. 
+ 
 ![image](searchcalled.png)
-In the third screenshot, I this time tried to search for strings in the String ArrayList that contain the string "s". This was done using the search method in my code ("/search?s=s"). Here, the code goes through the argument and filters through the command to find the string that I want to look for in the list. It then goes through each String index in the list and, using another String Arraylist, only adds the strings in the original list that contain the inputted string. Once the code checks all indices, it prints out the new String Arraylist containing the specific string onto the screen. In our case, the original list had the strings "okay", "sure", and "strings", so when we looked for the string "s" in the list, only two strings, "sure" and "strings", were returned since they contained the string "s". 
+4. In the third screenshot, I this time tried to search for strings in the String ArrayList that contain the string "s". This was done using the search method in my code ("/search?s=s"). Here, the code goes through the argument and filters through the command to find the string that I want to look for in the list. It then goes through each String index in the list and, using another String Arraylist, only adds the strings in the original list that contain the inputted string. Once the code checks all indices, it prints out the new String Arraylist containing the specific string onto the screen. In our case, the original list had the strings "okay", "sure", and "strings", so when we looked for the string "s" in the list, only two strings, "sure" and "strings", were returned since they contained the string "s". 
 
 
 ## Part 2 -- Week 3 
