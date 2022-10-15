@@ -140,7 +140,7 @@ Bug + Connection: \
 Looking at the code, the original implementation was changing/altering the original ArrayList using a for loop so by the time the first index got altered to equal the last index, the original first index value wasn't stored anywhere, hence the last value being 3 again. To fix this issue, the code needs to be altered so that there is a copy of the original ArrayList and that copy of the original ArrayList can be used to update and then return the actual ArrayList. Upon making this correction in lab, the input produced the expected output (yay, success). 
 
 
-***LinkedList.java file***
+***ListTests.java file***
 
 Failure-Inducing Input: 
 Upon testing the merge method, the following bug was discovered and improved upon. 
