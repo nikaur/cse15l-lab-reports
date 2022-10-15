@@ -107,3 +107,39 @@ Preface: There will be 4 screenshots in the following, the first one won't have 
 | Failure-Inducing Input | Symptom | Bug | Connection |
 | --- | --- | --- | --- | 
 | okay | so | im | trying |
+
+
+1. 
+Failure-Inducing Input: 
+```
+@Test
+ public void testReverseLargerArrays(){
+   int[] input1 = {1, 2, 3};
+   ArrayExamples.reverseInPlace(input1);
+   assertArrayEquals(new int[]{3, 2, 1}, input1);
+ }
+ ```
+
+Symptom: 
+```
+There was 1 failure:
+1) testReverseLargerArrays(ArrayTests)
+arrays first differed at element [2]; expected:<1> but was:<3>
+        at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:78)
+        at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:28)
+        at org.junit.Assert.internalArrayEquals(Assert.java:534)
+        at org.junit.Assert.assertArrayEquals(Assert.java:418)
+        at org.junit.Assert.assertArrayEquals(Assert.java:429)
+        at ArrayTests.testReverseLargerArrays(ArrayTests.java:23)
+        ... 32 trimmed
+Caused by: java.lang.AssertionError: expected:<1> but was:<3>
+        at org.junit.Assert.fail(Assert.java:89)
+        at org.junit.Assert.failNotEquals(Assert.java:835)
+        at org.junit.Assert.assertEquals(Assert.java:120)
+        at org.junit.Assert.assertEquals(Assert.java:146)
+        at org.junit.internal.ExactComparisonCriteria.assertElementsEqual(ExactComparisonCriteria.java:8)
+        at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:76)
+        ... 38 more
+```
+
+Essentially, the expected reversed list was {1, 2, 3}, but what we were getting instead was {}
