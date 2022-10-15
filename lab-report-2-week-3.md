@@ -100,3 +100,10 @@ Preface: There will be 4 screenshots in the following, the first one won't have 
 ## Part 2 -- Week 3 
 
 ***File One Name***
+
+[screenshot]
+
+
+| Failure-Inducing Input | Symptom | Bug | Connection |
+| --- | --- | --- | --- | 
+| okay | so | im | trying |
