@@ -1,8 +1,8 @@
 # Week 5 Lab Report 
 
-The following report considers the command grep, and explores three command-line options for this command. 
+The following report considers the command find, and explores three command-line options for this command. 
 
-## **Grep**
+## **Find**
 
 ### **Command-Line Option 1:** ***-iname option***
 
