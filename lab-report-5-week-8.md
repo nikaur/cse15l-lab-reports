@@ -176,6 +176,18 @@ if [[ -f ListExamples.java ]]
 ```
 this is an if statement that checks if the file ListExamples.java exists in student-submission. For this student submission the answer to the if statement is false. 
 
+18: 
+```
+then 
+```
+this will not run because the if statement is false. 
+
+19: 
+```
+    echo "File detected."
+```
+this also will not run because the if statement is false. 
+
 20: 
 ```
 else 
